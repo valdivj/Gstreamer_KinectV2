@@ -78,8 +78,8 @@ to the Nano home directory
 
    $sudo chmod -R a+rwx /usr/include
 
-  copy the opencv2 folder thats in the opencv4 folder
-  and place it in the same folder as the opencv4folder. 
+  Copy the opencv2 folder thats in the opencv4 folder
+  and place it in the same folder as the opencv4 folder. 
 
 29. $cd
 
