@@ -72,7 +72,7 @@ to the Nano home directory
 27. $cd
    
 
-28.The following 2 commands will give you file ipermission to copy opencv2 from the opencv4 file.
+28.The following 2 commands will give you file permission to copy opencv2 from the opencv4 file.
 
    $sudo chmod -R a+rwx /usr/local/include
 
