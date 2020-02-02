@@ -66,11 +66,11 @@ Lets get started
 
 26.$cd
 
-27. $sudo apt install ./libopenhmd-dev_0.2.0-3_arm64.deb 
-
-Clone this repo and move “libopenhmd-dev_0.2.0-3_arm64.deb”
+27.Clone this repo and move “libopenhmd-dev_0.2.0-3_arm64.deb”
 to the Nano home directory
-   
+
+$sudo apt install ./libopenhmd-dev_0.2.0-3_arm64.deb 
+
 
 28.The following 2 commands will give you file permission to copy opencv2 from the opencv4 file.
 
