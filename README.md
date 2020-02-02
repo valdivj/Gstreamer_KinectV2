@@ -6,7 +6,8 @@ Sorry about it being so long winded and convaluted but it was a quite a chore ju
 
 Most of this stuff is needed just to compile the gstreamer plugins for the KinectV2.
 I ran these commands after installing the latest nano SD card image :r32.3.1.
-Here is the link to the git hub repo if that I got the plugins from:
+Here is the link to the git hub repo that I got the plugins from:
+
  https://github.com/lubosz/gst-plugins-vr.git
 
 
