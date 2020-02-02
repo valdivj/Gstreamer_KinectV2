@@ -107,7 +107,7 @@ to the Nano home directory
 
 41. $sudo cp ../platform/linux/udev/90-kinect2.rules /etc/udev/rules.d/
 
-42. $sudo .bin/Protonect # you should be able to test the kinect wiyh this
+42. $sudo .bin/Protonect # you should be able to test the kinect with this
 
 43. $cd
 
