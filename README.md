@@ -52,7 +52,7 @@ Lets get started
 
 19.$sudo make install
 
-20.$sudo apt-get install -y assimp-utilspip
+20.$sudo apt-get install -y assimp-utils
 
 21.$cd
 
