@@ -47,7 +47,7 @@ Lets get started
 
 17.$cmake CmakeLists.txt
 
-18.$make -j4  # be pationt with this one its  really works the nano
+18.$make -j4  # be patient with this one its  really works the nano
 
 19.$sudo make install
 
