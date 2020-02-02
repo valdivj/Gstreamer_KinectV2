@@ -4,7 +4,7 @@
  These are the steps I took to get the KinectV2 to run on the Jetson Nano using gstreamer.
 Sorry about it being so long winded and convaluted but it was a quite a chore just to get the instructions down to this list.
 
-Most of this stuff is needed just to compile the gstreamer plugins for the KinectV2
+Most of this stuff is needed just to compile the gstreamer plugins for the KinectV2.
 I ran these commands after installing the latest nano SD card image :r32.3.1
 Here is the link to the git hub repo if that I got the plugins from:
  https://github.com/lubosz/gst-plugins-vr.git
