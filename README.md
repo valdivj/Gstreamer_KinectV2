@@ -134,6 +134,8 @@ $sudo apt install ./libopenhmd-dev_0.2.0-3_arm64.deb
 If all went well you should be able to run these gstreamer commands.
 You will notice that gst-plugin-path needs to point to the :/home/yourpath/gst-plugins-vr/build folder.
 
+Make sure you KinectV2 is plugged in
+
 1.Live steam
 
 $sudo  gst-launch-1.0 --gst-plugin-path=/home/nano/gst-plugins-vr/build freenect2src sourcetype=1 ! videoscale ! video/x-raw,width=1280,height=720,framerate=30/1 ! glimagesink
