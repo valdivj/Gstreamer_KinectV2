@@ -65,6 +65,7 @@ Lets get started
 25.$ninja -C ./build
 
 26. $sudo apt install ./libopenhmd-dev_0.2.0-3_arm64.deb 
+
 Clone this repo and move “libopenhmd-dev_0.2.0-3_arm64.deb”
 to the Nano home directory
 
