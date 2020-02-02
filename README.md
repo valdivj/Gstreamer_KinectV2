@@ -31,52 +31,52 @@ Lets get started
 
 9.$PKG_CONFIG_SYSROOT_DIR=$STAGING 
 
-10.    $./bootstrap
+10.$./bootstrap
 
-11.     $./configure
+11.$./configure
 
-12.    $make
+12.$make
 
-13.   $sudo make install
+13.$sudo make install
 
-14.   $cd
+14.$cd
 
-15.   $git clone https://github.com/assimp/assimp.git
+15.$git clone https://github.com/assimp/assimp.git
 
-16.   $cd assimp
+16.$cd assimp
 
-17.   $cmake CmakeLists.txt
+17.$cmake CmakeLists.txt
 
-18. $make -j4  # be pationt with this one its  really works the nano
+18.$make -j4  # be pationt with this one its  really works the nano
 
-19. $sudo make install
+19.$sudo make install
 
-20. $sudo apt-get install -y assimp-utilspip
+20.$sudo apt-get install -y assimp-utilspip
 
-21. $cd
+21.$cd
 
-22.  $git clone https://github.com/OpenHMD/OpenHMD.git
+22.$git clone https://github.com/OpenHMD/OpenHMD.git
 
-23.  $cd OpenHMD
+23.$cd OpenHMD
 
-24.  $meson ./build
+24.$meson ./build
 
-25.  $ninja -C ./build
+25.$ninja -C ./build
 
 26. $sudo apt install ./libopenhmd-dev_0.2.0-3_arm64.deb 
-# Clone this repo and move “libopenhmd-dev_0.2.0-3_arm64.deb”
+Clone this repo and move “libopenhmd-dev_0.2.0-3_arm64.deb”
 to the Nano home directory
 
-27.   $cd
+27. $cd
    
 
 28.The following 2 commands will give you file ipermission to copy opencv2 from the opencv4 file.
 
    $sudo chmod -R a+rwx /usr/local/include
 
-    $sudo chmod -R a+rwx /usr/include
+   $sudo chmod -R a+rwx /usr/include
 
-   copy the opencv2 folder thats in the opencv4 folder
+  copy the opencv2 folder thats in the opencv4 folder
   and place it in the same folder as the opencv4folder. 
 
 29. $cd
@@ -120,9 +120,9 @@ to the Nano home directory
 
 47. $cd gst-plugins-vr
 
-48.  $sudo ./configure
+48. $sudo ./configure
 
-49. copy file "gst3drenderer.c" from this repo and use it to replace the one thats in the folder home/yourpath/gst-plugins-vr/gst-libs/gst/3d/
+49. Copy file "gst3drenderer.c" from this repo and use it to replace the one thats in the folder home/yourpath/gst-plugins-vr/gst-libs/gst/3d/
 
 50. $sudo make
 
