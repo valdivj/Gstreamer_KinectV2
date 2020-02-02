@@ -128,20 +128,23 @@ to the Nano home directory
 
 50. $sudo make
 
-51. #cd
+51. $cd
 
 
 If all went well you should be able to run these gstreamer commands.
 You will notice that gst-plugin-path needs to point to the :/home/yourpath/gst-plugins-vr/build folder.
 
 1.Live steam
+
 $sudo  gst-launch-1.0 --gst-plugin-path=/home/nano/gst-plugins-vr/build freenect2src sourcetype=1 ! videoscale ! video/x-raw,width=1280,height=720,framerate=30/1 ! glimagesink
 
 2.infared stream
+
 $sudo gst-launch-1.0 --gst-plugin-path=/home/nano/gst-plugins-vr/build freenect2src sourcetype=2 ! glimagesink
 
 
 
 3. depth stream
+
 $sudo gst-launch-1.0 --gst-plugin-path=/home/nano/gst-plugins-vr/build freenect2src sourcetype=0 ! glimagesink
 
