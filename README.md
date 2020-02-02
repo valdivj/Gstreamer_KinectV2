@@ -2,10 +2,12 @@
  Gstreamer the KinectV2
  
  These are the steps I took to get the KinectV2 to run on the Nano using gstreamer.
-Sorry about it being so long winded and convaluted but it was a chore just to get th instructions down to this list.
+Sorry about it being so long winded and convaluted but it was a quite a chore just to get the instructions down to this list.
 
 Most of this stuff is needed just to compile the gstreamer plugins for the KinectV2
 I ran these commands after installing the latest nano SD card image :r32.3.1
+Here is the link to the git hub repo if that I got the plugins from:
+ https://github.com/lubosz/gst-plugins-vr.git
 
 
 
@@ -128,15 +130,16 @@ to the Nano home directory
 
 
 If all went well you should be able to run these gstreamer commands.
+You will notice that gst-plugin-path needs to point to the :/home/yourpath/gst-plugins-vr/build folder.
 
 1.Live steam
 $sudo  gst-launch-1.0 --gst-plugin-path=/home/nano/gst-plugins-vr/build freenect2src sourcetype=1 ! videoscale ! video/x-raw,width=1280,height=720,framerate=30/1 ! glimagesink
 
 2.infared stream
-$gst-launch-1.0 --gst-plugin-path=/home/nano/gst-plugins-vr/build freenect2src sourcetype=2 ! glimagesink
+$sudo gst-launch-1.0 --gst-plugin-path=/home/nano/gst-plugins-vr/build freenect2src sourcetype=2 ! glimagesink
 
 
 
 3. depth stream
-$gst-launch-1.0 --gst-plugin-path=/home/nano/gst-plugins-vr/build freenect2src sourcetype=0 ! glimagesink
+$sudo gst-launch-1.0 --gst-plugin-path=/home/nano/gst-plugins-vr/build freenect2src sourcetype=0 ! glimagesink
 
