@@ -95,7 +95,7 @@ $sudo apt install ./libopenhmd-dev_0.2.0-3_arm64.deb
 
 35. $sudo apt-get install libglfw3-dev
 
-36. $sudo apt-get install libopenni2-devc
+36. $sudo apt-get install libopenni2-dev
 
 37. $mkdir build && cd build 
 
