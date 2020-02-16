@@ -4,6 +4,13 @@
  These are the steps I took to get the KinectV2 to run on the Jetson Nano using gstreamer.
 Sorry about it being so long winded and convaluted but it was a quite a chore just to get the instructions down to this list.
 
+At the bottom of this page are Gstreamer commands to access the Kinect V2 streams.
+I also added the gestreamer commands to run the Kinect V2 with nvidia Deepstream 4.
+
+If you dont want run the gstreamer commands with the "--gst-plugin-path=/home/nano/gst-plugins-vr/build" you can copy the contents of:/home/dlinano/gst-plugins-vr/build TO
+/usr/lib/aarch64-linux-gnu/gstreamer-1.0/
+
+
 Most of this stuff is needed just to compile the gstreamer plugins for the KinectV2.
 I ran these commands after installing the latest nano SD card image :r32.3.1.
 Here is the link to the git hub repo that I got the plugins from:
@@ -144,9 +151,21 @@ $sudo  gst-launch-1.0 --gst-plugin-path=/home/nano/gst-plugins-vr/build freenect
 
 $sudo gst-launch-1.0 --gst-plugin-path=/home/nano/gst-plugins-vr/build freenect2src sourcetype=2 ! glimagesink
 
-
-
 3. depth stream
 
 $sudo gst-launch-1.0 --gst-plugin-path=/home/nano/gst-plugins-vr/build freenect2src sourcetype=0 ! glimagesink
+
+4. Nvidia Deepstream 4 with live stream
+
+ gst-launch-1.0 freenect2src sourcetype=1 ! videoconvert ! 'video/x-raw,format=(string)YUY2' !  nvvidconv ! 'video/x-raw(memory:NVMM),format=(string)NV12' ! nvvidconv ! 'video/x-raw,format=(string)NV12' ! nvvideoconvert ! 'video/x-raw(memory:NVMM),format=(string)NV12' ! mux.sink_0 nvstreammux live-source=1 name=mux batch-size=1 width=1280 height=720 ! nvinfer config-file-path=/opt/nvidia/deepstream/deepstream-4.0/samples/configs/deepstream-app/config_infer_primary_nano.txt  batch-size=1 ! nvmultistreamtiler rows=1 columns=1 width=1280 height=720 ! nvvideoconvert ! nvdsosd ! nvegltransform ! nveglglessink
+ 
+ 5. Nvidia Deepstream 4 with infared stream
+ 
+ gst-launch-1.0 freenect2src sourcetype=2 ! videoconvert ! 'video/x-raw,format=(string)YUY2' !  nvvidconv ! 'video/x-raw(memory:NVMM),format=(string)NV12' ! nvvidconv ! 'video/x-raw,format=(string)NV12' ! nvvideoconvert ! 'video/x-raw(memory:NVMM),format=(string)NV12' ! mux.sink_0 nvstreammux live-source=1 name=mux batch-size=1 width=512 height=424 ! nvinfer config-file-path=/opt/nvidia/deepstream/deepstream-4.0/samples/configs/deepstream-app/config_infer_primary_nano.txt  batch-size=1 ! nvmultistreamtiler rows=1 columns=1 width=512 height=424 ! nvvideoconvert ! nvdsosd ! nvegltransform ! nveglglessink
+ 
+ 6,Nvidia Deepstream 4 with depth stream
+ 
+ gst-launch-1.0 freenect2src sourcetype=0 ! videoconvert ! 'video/x-raw,format=(string)YUY2' !  nvvidconv ! 'video/x-raw(memory:NVMM),format=(string)NV12' ! nvvidconv ! 'video/x-raw,format=(string)NV12' ! nvvideoconvert ! 'video/x-raw(memory:NVMM),format=(string)NV12' ! mux.sink_0 nvstreammux live-source=1 name=mux batch-size=1 width=512 height=424 ! nvinfer config-file-path=/opt/nvidia/deepstream/deepstream-4.0/samples/configs/deepstream-app/config_infer_primary_nano.txt  batch-size=1 ! nvmultistreamtiler rows=1 columns=1 width=512 height=424 ! nvvideoconvert ! nvdsosd ! nvegltransform ! nveglglessink
+ 
+ 
 
