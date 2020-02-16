@@ -7,8 +7,10 @@ Sorry about it being so long winded and convaluted but it was a quite a chore ju
 At the bottom of this page are Gstreamer commands to access the Kinect V2 streams.
 I also added the gestreamer commands to run the Kinect V2 with nvidia Deepstream 4.
 
-If you dont want run the gstreamer commands with the "--gst-plugin-path=/home/nano/gst-plugins-vr/build" you can copy the contents of:/home/dlinano/gst-plugins-vr/build TO
+If you dont want run the gstreamer commands with the "--gst-plugin-path=/home/nano/gst-plugins-vr/build" you can copy the contents of:/home/nano/gst-plugins-vr/build TO
 /usr/lib/aarch64-linux-gnu/gstreamer-1.0/
+
+they have to be the paths on youre nano
 
 
 Most of this stuff is needed just to compile the gstreamer plugins for the KinectV2.
